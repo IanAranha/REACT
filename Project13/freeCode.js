@@ -9,7 +9,6 @@ const TypesOfFruit = () => {
             <li>Strawberries</li>
             <li>Bananas</li>
         </ul>
-        
     </div>
     )
 }
@@ -17,24 +16,26 @@ const TypesOfFruit = () => {
 const Fruits = () =>{
     return (
         <div>
+            <p>From Fruits component </p>
+            <p>Fruits is the parent of TypesOfFruit </p>
             <TypesOfFruit />
         </div>
     )
 }
-
+//
 class TypesOfFood extends React.Component {
     constructor(props){
         super(props)
     }
-    
     render(){
         return(
         <div>
-            <h1>Types of Food Component<p>
-            <Fruits/>    
+            <h1>Types of Food Component</h1>
+            <p>This is from TypesOfFood component</p>
+            <Fruits />
         </div>
         )
     }
 }
 
-ReactDOM.render(<TypesOfFruit />, document.getElementById('app'))
+ReactDOM.render(<TypesOfFood />, document.getElementById('app'))
