@@ -3,7 +3,8 @@ const frontEndFrameworks = [
 ] 
 
 function Frameworks(){
-    return (renderFrameworks = frontEndFrameworks.map(i => <li key={i.toString()}>{i}</li>))
+    const renderFrameworks = frontEndFrameworks.map(i => <li key={i.toString()}>{i}</li>)
+    return renderFrameworks
 }
-
-ReactDOM.render(React.createElement(Frameworks()), document.getElementById('app'))
+const test = Frameworks()
+ReactDOM.render(test, document.getElementById('app'))
